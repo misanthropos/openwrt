@@ -259,6 +259,17 @@ define Device/dir-600-b1
 endef
 TARGET_DEVICES += dir-600-b1
 
+define Device/dir-600-b5e
+  $(Device/seama)
+  DTS := DIR-610-A1
+  BLOCKSIZE := 4k
+  SEAMA_SIGNATURE := wrgn59_dlob.hans_dir600
+  IMAGE_SIZE := $(ralink_default_fw_size_4M)
+  DEVICE_TITLE := D-Link DIR-600 B5E 
+  DEVICE_PACKAGES := kmod-ledtrig-netdev kmod-ledtrig-timer
+endef
+TARGET_DEVICES += dir-600-b5e
+
 define Device/dir-610-a1
   $(Device/seama)
   DTS := DIR-610-A1
