@@ -1,0 +1,11 @@
+--- a/drivers/staging/fbtft/fb_watterott.c
++++ b/drivers/staging/fbtft/fb_watterott.c
+@@ -215,7 +215,7 @@ static int verify_gpios(struct fbtft_par
+ 	return 0;
+ }
+ 
+-#ifdef CONFIG_FB_BACKLIGHT
++#if IS_ENABLED(CONFIG_FB_BACKLIGHT)
+ static int backlight_chip_update_status(struct backlight_device *bd)
+ {
+ 	struct fbtft_par *par = bl_get_data(bd);
